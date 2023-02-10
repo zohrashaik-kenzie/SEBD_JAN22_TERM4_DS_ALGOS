@@ -93,7 +93,8 @@ static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int 
         llist.insertNode(3);
 
         insertNodeAtPosition(llist.head,4,2);
-       // printSinglyLinkedList(llist.head, "->");
+        printSinglyLinkedList(llist.head, "->");
+        System.out.println();
 
         insertNodeAtPositionRecurse(llist.head,4,2);
         printSinglyLinkedList(llist.head, "->");
