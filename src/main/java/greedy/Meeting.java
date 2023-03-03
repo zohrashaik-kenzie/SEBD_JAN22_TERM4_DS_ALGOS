@@ -6,6 +6,15 @@ public class Meeting {
     private int startTime;
     private int endTime;
 
+    @Override
+    public String toString() {
+        return "Meeting{" +
+                "name='" + name + '\'' +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                '}';
+    }
+
     public Meeting(String name, int startTime, int endTime) {
         this.name = name;
         this.startTime = startTime;
@@ -34,6 +43,10 @@ public class Meeting {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int duration(){
+        return endTime - startTime;
     }
 
 }

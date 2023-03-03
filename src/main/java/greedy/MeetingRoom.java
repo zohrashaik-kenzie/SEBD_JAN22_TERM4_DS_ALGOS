@@ -27,14 +27,33 @@ public class MeetingRoom {
         List<Meeting> results = new ArrayList<>();
         int currentEndTime = 0;
 
-        meetings.sort(Comparator.comparing(Meeting::getEndTime));
+        meetings.sort(Comparator.comparing(Meeting::duration));
 
         for (Meeting meeting : meetings) {
             if (meeting.getStartTime() >= currentEndTime) {
                 results.add(meeting);
+                System.out.println("Meeting: " + meeting);
                 currentEndTime = meeting.getEndTime();
             }
         }
         return results.size();
+    }
+
+    public static void main(String[] args){
+        /**
+         *  * meetings = [(meeting1, 13-14), (meeting2, 15-16), (meeting3, 8-12), (meeting4, 11-12),
+         *      * (meeting5, 9-11), (meeting6, 14-16)]
+         *
+         */
+        List<Meeting> meetingList = new ArrayList<>();
+        meetingList.add(new Meeting("meeting1",13,14));
+        meetingList.add(new Meeting("meeting2",15,16));
+        meetingList.add(new Meeting("meeting3",8,12));
+        meetingList.add(new Meeting("meeting4",11,12));
+        meetingList.add(new Meeting("meeting5",9,11));
+        meetingList.add(new Meeting("meeting6",14,16));
+
+        System.out.println(getMaximumMeetings(meetingList));
+
     }
 }

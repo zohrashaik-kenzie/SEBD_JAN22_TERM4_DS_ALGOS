@@ -42,7 +42,7 @@ public class LongestCommonPrefix {
     // Driver program to test above function
     public static void main(String[] args) {
         String arr[] = {"amazonrainforest", "amazonian",
-                "amazinggrace", "amazing"};
+                "amazinggrace", "amazing", "amaze", "amazement"};
         int n = arr.length;
 
         String ans = commonPrefix(arr, 0, n - 1);
