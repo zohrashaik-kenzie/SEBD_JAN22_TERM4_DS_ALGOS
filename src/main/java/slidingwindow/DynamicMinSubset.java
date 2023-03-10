@@ -14,6 +14,10 @@ public class DynamicMinSubset {
                 minWindowSize = Math.min(minWindowSize, windowEnd - windowStart + 1);
                 currentWindowSum -= arr[windowStart];
                 windowStart++;
+
+                if (minWindowSize == 1){
+                    return 1;
+                }
             }
         }
 
@@ -29,7 +33,7 @@ public class DynamicMinSubset {
         // find the length of the smallest subarray
         int len = findSmallestSubarrayLen(A, k);
 
-        if (len != Integer.MAX_VALUE) {
+        if (len  != Integer.MAX_VALUE) {
             System.out.print("The smallest subarray length is " + len);
         }
         else {
