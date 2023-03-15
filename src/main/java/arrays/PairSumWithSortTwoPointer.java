@@ -30,7 +30,8 @@ public class PairSumWithSortTwoPointer {
         int[][] result = calculatePairs(intArray, 20);
 
         for (int i = 0; i < intArray.length; i++) {
-            System.out.println(Arrays.toString(result[i]));
+            if(result[i] != null)
+                System.out.println(Arrays.toString(result[i]));
         }
     }
 
