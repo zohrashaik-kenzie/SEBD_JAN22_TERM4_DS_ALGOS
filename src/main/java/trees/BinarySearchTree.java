@@ -1,8 +1,17 @@
-package Trees;
+package trees;
 
-public class BinaryTreeHeight {
+public class BinarySearchTree {
+    Node root;
 
-    public static Node insert(Node root, int data) {
+    public BinarySearchTree() {
+        root = null;
+    }
+
+    public void insert(int key) {
+        root = insert(root, key);
+    }
+
+    public  Node insert(Node root, int data) {
         if(root == null) {
             return new Node(data);
         } else {
@@ -39,18 +48,20 @@ public class BinaryTreeHeight {
             return root;
     }
 
+    public String getOrder() {
+        StringBuilder sb = new StringBuilder();
+        preOrderTraversal(root, sb);
+        return sb.toString();
+    }
 
-    public static void main(String[] args){
-        Node root = new Node(4);
-        insert(root,2);
-        insert(root,6);
-        insert(root,1);
-        insert(root,3);
-        insert(root, 5);
-        insert(root, 7);
+    private void preOrderTraversal(Node node, StringBuilder sb) {
+        if (node != null) {
 
-        int height = height(root);
-        System.out.println("Height of tree = " + height);
-
+            if (sb != null) {
+                sb.append(node.getData() + ";");
+            }
+            preOrderTraversal(node.left, sb);
+            preOrderTraversal(node.right, sb);
+        }
     }
 }
