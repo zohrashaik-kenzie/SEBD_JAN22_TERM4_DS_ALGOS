@@ -29,7 +29,7 @@ public class QuickSortTest {
         Assert.assertEquals(9, sorted[7]);
         Assert.assertEquals(15, sorted[8]);
 
-        quickSort.prettyPrint(sorted);
+       // quickSort.prettyPrint(sorted);
     }
 
 }

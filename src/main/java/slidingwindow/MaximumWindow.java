@@ -25,7 +25,7 @@ public class MaximumWindow {
     public static void main(String[] args){
         Integer array[] = new Integer[]{4,2,1,7,8,1,2,8,1,0};
         List<Integer> list = Arrays.asList(array);
-        int max = findMaximumSum(list,3);
+        int max = findMaximumSum(list,4);
         System.out.println("Max sum = " + max);
 
     }

@@ -25,6 +25,6 @@ public class NumberFactor {
 
     public static void main(String[] args) {
         NumberFactor np = new NumberFactor();
-        System.out.println(np.waysToGetNTopDown(100));
+        System.out.println(np.waysToGetNTopDown(6));
     }
 }

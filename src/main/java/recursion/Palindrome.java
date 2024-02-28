@@ -21,7 +21,7 @@ public class Palindrome {
 
     public static void main(String args[])
     {
-        String str = "lexvel";
+        String str = "leeeeeeeeeevel";
 
         if (isPalindromeRecursive(str))
             System.out.println("Yes");

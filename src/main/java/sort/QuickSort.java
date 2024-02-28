@@ -1,8 +1,10 @@
 package sort;
 
+import java.util.Arrays;
+
 public class QuickSort {
 
-    public int[] sort(int[] array) {
+    public static int[] sort(int[] array) {
         // Pick a pivot element randomly
 
         // Walk through the array making sure that all the elements
@@ -17,14 +19,14 @@ public class QuickSort {
         return array;
     }
 
-    private void quickSort(int[] array, int left, int right) {
+    private static void quickSort(int[] array, int left, int right) {
         if (left >= right) {
             return;
         }
 
         // Step 1: Pick a pivot element - we will choose the center
         // Better would be to choose left + (right-left)/2 (as this would avoid overflow error for large arrays i.e. 2GB))
-        int pivot = array[(left + right)/2];
+        int pivot = array[(left + (right-left))/2];
 
         // Step 2: Partition the array around this pivot - return the index of the partition
         int index = partition(array, left, right, pivot);
@@ -34,7 +36,7 @@ public class QuickSort {
         quickSort(array, index, right);
     }
 
-    private int partition(int[] array, int left, int right, int pivot) {
+    private static int partition(int[] array, int left, int right, int pivot) {
         // Move the left and right pointers in towards each other
         while (left <= right) {
 
@@ -61,15 +63,16 @@ public class QuickSort {
         return left;
     }
 
-    private void swap(int[] array, int left, int right) {
+    private static void swap(int[] array, int left, int right) {
         int temp = array[left];
         array[left] = array[right];
         array[right] = temp;
     }
 
-    public void prettyPrint(int[] a) {
-        for (int i = 0; i < a.length; i++) {
-            System.out.println(a[i]);
-        }
+
+    public static void main(String[] args) {
+        int[] a = {9,-3,5,2,6,8,-6,1,3};
+        sort(a);
+        System.out.print("Quick sort (iteration): "  +  Arrays.toString(a));
     }
 }

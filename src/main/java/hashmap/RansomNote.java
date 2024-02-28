@@ -64,6 +64,6 @@ public class RansomNote {
         List<String> magList = Arrays.asList(magazines);
         List<String> noteList = Arrays.asList(notes);
 
-        checkMagazine(magList, noteList);
+        checkMagazine2(magList, noteList);
     }
 }

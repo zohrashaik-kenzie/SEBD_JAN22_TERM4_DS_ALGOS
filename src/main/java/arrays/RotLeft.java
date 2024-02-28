@@ -11,11 +11,11 @@ public class RotLeft {
         {
             for(int i=0;i<n-k;i++)
             {
-                returnArray[i] = a[k+i];
+                returnArray[i] = a[k+i]; //0,1,2 3,4,5
             }
             for(int i=0;i<k;i++)
             {
-                returnArray[n-k+i] = a[i];
+                returnArray[n-k+i] = a[i]; //3,4 1,2
             }
 
         }
@@ -29,7 +29,7 @@ public class RotLeft {
     public static void main(String[] args) {
         int[] array = {1,2,3,4,5};
 
-        int[] rotArray = arrayLeftRotation(array, 4);
+        int[] rotArray = arrayLeftRotation(array, 2);
         for(int i=0;i<rotArray.length;i++){
             System.out.print(rotArray[i] + " ");
         }
