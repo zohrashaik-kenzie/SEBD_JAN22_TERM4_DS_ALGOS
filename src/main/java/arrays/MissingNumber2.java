@@ -11,6 +11,7 @@ public class MissingNumber2 {
             sum_array += arr[i];
         }
 
+
         int diff = sum_n - sum_array;
         if(diff > 0)
             System.out.println("The missing number is: " + diff);

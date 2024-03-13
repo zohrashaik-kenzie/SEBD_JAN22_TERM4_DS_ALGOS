@@ -32,7 +32,7 @@ public class Partition {
         ll.insertNode(80);
         ll.traversalLL();
 
-        LinkedList l2 = partition(ll,30);
+        LinkedList l2 = partition(ll,50);
         l2.traversalLL();
     }
 }

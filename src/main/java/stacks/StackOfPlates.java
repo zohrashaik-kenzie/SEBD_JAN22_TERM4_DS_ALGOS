@@ -17,7 +17,7 @@ public class StackOfPlates {
 
     public StackOfPlates(int THRESHOLD) {
         this.THRESHOLD = THRESHOLD;
-        stacks = new ArrayList<Stack>();
+        stacks = new ArrayList<>();
         Stack stack = new Stack();
         stacks.add(stack);
     }
@@ -49,4 +49,16 @@ public class StackOfPlates {
         return stacks.get(stacks.size() - 1);
     }
 
+    public static void main(String[] args){
+        StackOfPlates plates = new StackOfPlates(3);
+        plates.push(10);
+        plates.push(3);
+        plates.push(4);
+        plates.push(7);
+        plates.push(10);
+        plates.push(5);
+        plates.push(9);
+
+        System.out.println(plates.getCurrentStack().toString());
+    }
 }

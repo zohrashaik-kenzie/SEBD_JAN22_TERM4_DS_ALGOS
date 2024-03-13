@@ -6,7 +6,7 @@ public class SieveOfEratosthenes {
         int upperBoundSquareRoot = (int) Math.sqrt(upperBound);
 
         // isComposite means not prime
-        boolean[] isComposite = new boolean[upperBound + 1];
+        boolean[] isComposite = new boolean[upperBound + 1]; //100 numbers
 
         // going from prime 2 up to sqrt n
         for (int m = 2; m <= upperBoundSquareRoot; m++) {

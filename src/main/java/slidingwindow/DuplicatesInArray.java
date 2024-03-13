@@ -32,7 +32,7 @@ public class DuplicatesInArray {
     public static void main(String[] args)
     {
         int[] nums = { 5, 6, 8, 2, 4, 6, 9 };
-        int k = 6;
+        int k = 2;
 
         if (hasDuplicate(nums, k)) {
             System.out.println("Duplicates found");
