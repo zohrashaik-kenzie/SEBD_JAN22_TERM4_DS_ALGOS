@@ -28,6 +28,7 @@ public class BackPacking {
         List<BackPackItem> results = new ArrayList<>();
 
        backPackItems.sort(Comparator.comparing(BackPackItem::getWeight));
+        //backPackItems.sort((s1,s2) -> Math.min(s1.getWeight(),s2.getWeight()));
         int remainingWeight = weightLimit;
 
         for (BackPackItem backPackItem : backPackItems) {

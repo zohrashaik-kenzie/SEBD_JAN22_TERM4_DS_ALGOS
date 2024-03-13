@@ -49,6 +49,8 @@ public class CaesarCipherAlgo {
         return plainText.toString();
     }
     public static void main(String[] args){
-         System.out.println(encrypt("THIS IS A TEST",3));
+
+        System.out.println(encrypt("THIS IS A TEST",3));
+        System.out.println(decrypt("WKLV LV D WHVW",3));
     }
 }

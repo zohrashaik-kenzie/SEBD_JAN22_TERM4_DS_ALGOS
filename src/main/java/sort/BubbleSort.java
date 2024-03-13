@@ -1,8 +1,10 @@
 package sort;
 
+import java.util.Arrays;
+
 public class BubbleSort {
 
-    public int[] sort(int arr[])
+    public static int[] bubbleSort(int arr[])
     {
         int n = arr.length;
         for (int i = 0; i < n-1; i++) {
@@ -18,5 +20,11 @@ public class BubbleSort {
         }
 
         return arr;
+    }
+
+    public static void main(String[] args) {
+        int[] a = {5,1,4,2,8};
+        bubbleSort(a);
+        System.out.print("Bubble sort (iteration): " + Arrays.toString(a));
     }
 }
