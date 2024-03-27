@@ -12,7 +12,7 @@ import java.util.Stack;
 
 public class StackOfPlates {
 
-    private int THRESHOLD = 0;
+    private int THRESHOLD = 3;
     private ArrayList<Stack> stacks;
 
     public StackOfPlates(int THRESHOLD) {

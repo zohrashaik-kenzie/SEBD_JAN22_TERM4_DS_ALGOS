@@ -28,7 +28,7 @@ public class DynamicMinSubset {
     {
         // an array of positive numbers
         int[] A = {4,2,2,7,8,1,2,8,1,0};
-        int k = 8;
+        int k = 9;
 
         // find the length of the smallest subarray
         int len = findSmallestSubarrayLen(A, k);

@@ -42,7 +42,7 @@ public class MinStack {
 
         // check for a min every time we add a node
         if (head != null) {
-            min = Math.min(data, min());
+            min = Math.min(data, getMin());
         }
 
         Node newNode = new Node(data, min);
@@ -57,8 +57,30 @@ public class MinStack {
         return data;
     }
 
-    public int min() {
+    public int getMin() {
         return head.min;
+    }
+
+    public static void main(String[] args){
+        MinStack s = new MinStack();
+
+        // Function calls
+        s.push(5);
+        System.out.println("Current min 1 = " + s.getMin());
+        s.push(3);
+        s.push(7);
+        s.push(3);
+        s.push(8);
+        System.out.println("Current min 2 = " + s.getMin());
+        s.pop();
+        s.getMin();
+        System.out.println("Current min 3 = " + s.getMin());
+        s.pop();
+        s.pop();
+        System.out.println("Current min 4 = " + s.getMin());
+        s.pop();
+        System.out.println("Current min 5 = " + s.getMin());
+
     }
 
 }

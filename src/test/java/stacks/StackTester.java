@@ -22,11 +22,11 @@ public class StackTester {
         minStack.push(6);
         minStack.push(3);
         minStack.push(7);
-        Assert.assertEquals(3, minStack.min());
+        Assert.assertEquals(3, minStack.getMin());
         minStack.pop();
-        Assert.assertEquals(3, minStack.min());
+        Assert.assertEquals(3, minStack.getMin());
         minStack.pop();
-        Assert.assertEquals(5, minStack.min());
+        Assert.assertEquals(5, minStack.getMin());
     }
 
     @Test
