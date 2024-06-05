@@ -25,6 +25,7 @@ public class MinAbsoluteDifference {
     public static void main(String[] args) throws IOException {
 
         Integer[] arr = {4,-1,5};
+        //-1,4,5
         List<Integer> list = Arrays.asList(arr);
 
         int result = minimumAbsoluteDifference(list);
